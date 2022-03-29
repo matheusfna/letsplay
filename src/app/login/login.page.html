@@ -1,9 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
+  <ion-img src="./../../assets/img/logo.PNG"></ion-img>
+  <br>
+
+  <ion-item color="secondary">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <br>
+  <ion-item color="secondary">
+    <ion-label position="floating">Senha</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+
+  <br>
+  <ion-button expand="block" size="small" [routerLink]="['/home']">Entrar</ion-button>
+  <br>
+  
+  <div id="criarConta">
+    <ion-router-link [routerLink]="['/register']">Criar Conta</ion-router-link>
+  </div>
+  
 
 </ion-content>
