@@ -1,9 +1,37 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
+  
+  <div id="divCadastroUsuario">
+    <ion-label>Cadastro de Usuário</ion-label>
+  </div>
+  <br>
 
+  <ion-item color="secondary">
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <br>
+  
+  <ion-item color="secondary">
+    <ion-label position="floating">Telefone</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <br>
+
+  <ion-item color="secondary">
+    <ion-label position="floating">E-mail</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <br>
+
+  <ion-item color="secondary">
+    <ion-label position="floating">Senha</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <br>
+
+  <ion-button expand="block" size="small" [routerLink]="['/login']">Cadastrar</ion-button>
 </ion-content>
