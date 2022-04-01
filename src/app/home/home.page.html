@@ -1,10 +1,6 @@
 <ion-header [translucent]="true">
+  <ion-list>
 
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-list>  
-    
     <ion-item id="esporte">
       <ion-select placeholder="Esporte">
         <ion-select-option value="f">Female</ion-select-option>
@@ -25,32 +21,22 @@
         <ion-select-option value="m">Male</ion-select-option>
       </ion-select>
     </ion-item>
-  
+
   </ion-list>
+</ion-header>
 
-  <ion-item color="success" id="listaQuadras" href="/">
+<ion-content [fullscreen]="true">
+  <ion-button (click)="x()">
+    teste
+  </ion-button>
+  <ion-item *ngFor="let quadra of quadras" color="success" id="listaQuadras" href="/">
     <ion-label>
-      Quadra da Vilarinho -> R$ 150/Hr
+      {{quadra.nome}} {{quadra.valor}}
     </ion-label>
   </ion-item>
-
-  <ion-item color="success" id="listaQuadras" href="/">
-    <ion-label>
-      Quadra da Vilarinho -> R$ 150/Hr
-    </ion-label>
-  </ion-item>
-
-  <ion-item color="success" id="listaQuadras" href="/">
-    <ion-label>
-      Quadra da Vilarinho -> R$ 150/Hr
-    </ion-label>
-  </ion-item>
-
-  <footer>
-    <ion-icon name="home-outline" id="home" onclick="window.location.href='/home'" ></ion-icon>
-    <ion-icon name="calendar-number-outline" id="calendar" onclick="window.location.href='/'"></ion-icon>
-  </footer>
-
 </ion-content>
 
-    
+<ion-footer>
+  <ion-icon name="home-outline" id="home" onclick="window.location.href='/home'"></ion-icon>
+  <ion-icon name="calendar-number-outline" id="calendar" onclick="window.location.href='/'"></ion-icon>
+</ion-footer>
