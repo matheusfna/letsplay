@@ -1,5 +1,7 @@
 {
   "name": "letsplay",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

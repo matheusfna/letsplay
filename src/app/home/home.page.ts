@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+import { StorageService } from '../services/storage.services';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -9,15 +10,26 @@ import { Component } from '@angular/core';
 
 export class HomePage {
 
-  public quadras = [
-    { nome: "José Geraldo", valor: "R$ 120/hr" }
-  ];
+  public quadras = [];
+  public quadraT = [];
+
   public x() {
-    this.quadras.push({ nome: "Teste", valor: "ola" })
+    this.quadraT.push({ nome: "jose", valor: "ol111a" })
+    this.storage.set('TESTE', this.quadraT);
   };
 
-  constructor() { }
+  constructor(private storage: StorageService) { }
 
-
+  ngOnInit() {
+    this.get();
+  }
+  public get() {
+    this.quadras = [];
+    this.storage.get('TESTE').then((x) => {
+      x.forEach(item => {
+        this.quadras.push({ nome: item.nome, valor: item.valor });
+      });
+    });
+  }
 
 }
