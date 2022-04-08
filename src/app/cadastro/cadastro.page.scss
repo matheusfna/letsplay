@@ -2,7 +2,7 @@ ion-content  {
     --background: url("./../../assets/img/backgroundapp.jpeg") no-repeat center center / cover !important;
   }
 
-ion-item {
+.label {
     width: 250px;
     height: 50px;
     margin-left: auto;
@@ -16,11 +16,18 @@ ion-button {
     margin-right: auto;
 }
 
-#divCadastroUsuario {
+#divCadastroQuadra {
     text-align: center;
     margin-top: 20%;
     font-size: 1.5rem;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
     color: white;
+}
+
+.descricao {
+    --border-radius:20px;
+    margin-left: 15%;
+    margin-right: 15%;
+
 }
