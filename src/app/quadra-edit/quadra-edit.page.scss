@@ -1,0 +1,33 @@
+ion-content  {
+    --background: url("./../../assets/img/backgroundapp.jpeg") no-repeat center center / cover !important;
+  }
+
+.label {
+    width: 250px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+ion-button {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#divCadastroQuadra {
+    text-align: center;
+    margin-top: 20%;
+    font-size: 1.5rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.descricao {
+    --border-radius:20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
