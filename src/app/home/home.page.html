@@ -25,18 +25,23 @@
   </ion-list>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-button (click)="x()">
-    teste
-  </ion-button> 
-   <ion-button (click)="get()">
-    teste get
-  </ion-button>
-  <ion-item *ngFor="let quadra of quadras" color="success" id="listaQuadras" href="/">
-    <ion-label>
-      {{quadra.nome}} {{quadra.valor}}
-    </ion-label>
-  </ion-item>
+<ion-content>
+  <ion-card [routerLink]="['/']" *ngFor="let obj of quadras">
+    <ion-card-header>
+
+      <ion-card-title>
+        {{ obj.nome }}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Valor Hora R$: </ion-label>
+        <ion-input type="" [ngModel]="obj.valorHora">
+        </ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
 
 <ion-footer>

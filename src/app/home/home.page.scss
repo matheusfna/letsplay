@@ -1,4 +1,4 @@
-ion-content  {
+ion-content {
   --background: url("./../../assets/img/backgroundapp.jpeg") no-repeat center center / cover !important;
 }
 
@@ -12,10 +12,18 @@ ion-footer {
   padding: 3px;
   background-color: rgb(36, 36, 36);
   color: white;
-	position: absolute;
-	bottom: 0;
-  width: 100%;  
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   align-items: center;
+}
+
+ion-card {
+  background-color: greenyellow;
+}
+
+ion-card-title {
+  color: black;
 }
 
 #calendar {
@@ -26,25 +34,28 @@ ion-footer {
   margin-left: 50px;
 }
 
-#esporte{
+#esporte {
   float: left;
   width: 100px;
   font-size: 12px;
+  background-color: black;
 }
 
-#cidade{
+#cidade {
   float: left;
   width: 100px;
   font-size: 12px;
+  background-color: black;
 }
 
-#bairro{
+#bairro {
   float: left;
   width: 100px;
   font-size: 12px;
+  background-color: black;
 }
 
-#listaQuadras{
+#listaQuadras {
   padding: 3px;
   border-radius: 18px;
   margin-left: auto;

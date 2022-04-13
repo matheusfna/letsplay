@@ -78,6 +78,15 @@ export class QuadrasService {
       }
     }
   }
+
+  public delete(id: number) {
+    let posicao = 0;
+
+    posicao = this.quadras.findIndex((quadra) => quadra.id === id);
+
+    if (posicao > -1)
+      this.quadras.splice(posicao, 1);
+  }
 }
 
 

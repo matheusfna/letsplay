@@ -1,35 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { StorageService } from '../services/storage.services';
+import { Quadra } from 'src/app/model/quadra.model';
+import { QuadrasService } from 'src/app/services/quadras.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
 
+export class HomePage implements OnInit {
 
-export class HomePage {
+  public quadras: Array<Quadra> = [];
 
-  public quadras = [];
-  public quadraT = [];
-
-  public x() {
-    this.quadraT.push({ nome: "jose", valor: "ol111a" })
-    this.storage.set('TESTE', this.quadraT);
-  };
-
-  constructor(private storage: StorageService) { }
+  constructor(private quadraService: QuadrasService) { }
 
   ngOnInit() {
-    this.get();
+    this.quadras = this.quadraService.getAll();
   }
-  public get() {
-    this.quadras = [];
-    this.storage.get('TESTE').then((x) => {
-      x.forEach(item => {
-        this.quadras.push({ nome: item.nome, valor: item.valor });
-      });
-    });
-  }
+
 
 }

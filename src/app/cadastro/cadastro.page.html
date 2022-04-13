@@ -11,51 +11,51 @@
 
   <ion-item color="secondary" class="label">
     <ion-label position="floating">Nome</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="quadra.nome"></ion-input>
   </ion-item>
   <br>
 
   <ion-item color="secondary" class="label">
     <ion-label position="floating">Logradouro</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="quadra.logradouro"></ion-input>
   </ion-item>
   <br>
 
   <ion-item color="secondary" class="label">
     <ion-label position="floating">Bairro</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="quadra.bairro"></ion-input>
   </ion-item>
   <br>
 
   <ion-item color="secondary" class="label">
     <ion-label position="floating">Cidade</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="quadra.cidade"></ion-input>
   </ion-item>
   <br>
 
   <ion-item color="secondary" class="label">
     <ion-label position="floating">Esporte</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="quadra.esporte"></ion-input>
   </ion-item>
   <br>
 
   <ion-item color="secondary" class="label">
     <ion-label position="floating">Valor Hora</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="quadra.valorHora"></ion-input>
   </ion-item>
   <br>
 
   <ion-item color="secondary" class="label">
     <ion-label position="floating">Telefone</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="quadra.telefone"></ion-input>
   </ion-item>
   <br>
 
   <ion-item color="secondary" class="descricao">
-    <ion-label position="floating">Description</ion-label>
-    <ion-textarea></ion-textarea>
+    <ion-label position="floating">Descrição</ion-label>
+    <ion-textarea [(ngModel)]="quadra.descricao"></ion-textarea>
   </ion-item>
   <br>
 
-  <ion-button expand="block" size="small" [routerLink]="['/login']">Cadastrar</ion-button>
+  <ion-button (click)="cadastrar()" expand="block" size="small">Cadastrar</ion-button>
 </ion-content>
