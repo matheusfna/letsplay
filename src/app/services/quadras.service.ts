@@ -61,8 +61,7 @@ export class QuadrasService {
     this.quadras.push(quadra);
   }
 
-  public edit(quadra: Quadra) {
-    const id = quadra.id;
+  public edit(quadra: Quadra, id: Number) {
 
     for (let obj of this.quadras) {
       if (obj.id === id) {

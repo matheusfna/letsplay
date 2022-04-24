@@ -22,8 +22,7 @@ export class QuadraEditPage implements OnInit {
   }
 
   public editar() {
-    this.quadraEdit.nome = this.quadra.nome;
-    this.quadrasService.edit(this.quadraEdit);
+    this.quadrasService.edit(this.quadraEdit, this.quadra.id);
     this.rota.navigate(['/home']);
   }
 
