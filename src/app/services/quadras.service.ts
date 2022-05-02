@@ -13,7 +13,7 @@ export class QuadrasService {
       logradouro: 'rua dos pobres 666',
       bairro: 'mae dos pobres',
       cidade: 'Belo Horizonte',
-      esporte: 'Futebol',
+      esporte: 3,
       valorHora: 150,
       telefone: '98888888',
       descricao: 'Uma quadra esportiva perfeita para sua diversão'
@@ -24,7 +24,7 @@ export class QuadrasService {
       logradouro: 'rua dos ricos 555',
       bairro: 'mae dos ricos',
       cidade: 'Belo Horizonte',
-      esporte: 'Futebol',
+      esporte: 1,
       valorHora: 5000,
       telefone: '977777777',
       descricao: 'Uma quadra esportiva perfeita para sua diversão'
@@ -35,7 +35,7 @@ export class QuadrasService {
       logradouro: 'Sem ideia 444',
       bairro: 'mae dos sem ideia',
       cidade: 'Belo Horizonte',
-      esporte: 'volei',
+      esporte: 2,
       valorHora: 50,
       telefone: '966666666',
       descricao: 'Uma quadra esportiva perfeita para sua diversão'
@@ -46,6 +46,19 @@ export class QuadrasService {
 
   public getAll() {
     return this.quadras;
+  }
+
+  public getByEsporte(cod: number) {
+    let esportes = [];
+    if (cod === 0)
+      return this.quadras;
+
+    for (let obj of this.quadras) {
+      if (obj.esporte === cod) {
+        esportes.push(obj);
+      }
+    }
+    return esportes;
   }
 
   public getById(id: number) {

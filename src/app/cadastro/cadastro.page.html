@@ -33,9 +33,10 @@
   </ion-item>
   <br>
 
-  <ion-item color="secondary" class="label">
-    <ion-label position="floating">Esporte</ion-label>
-    <ion-input [(ngModel)]="quadra.esporte"></ion-input>
+  <ion-item color="secondary" id="esporte" class="label">
+    <ion-select placeholder="Selecione o Esporte" [(ngModel)]="quadra.esporte">
+      <ion-select-option *ngFor="let item of esportes" [value]="item.id">{{item.nome}}</ion-select-option>
+    </ion-select>
   </ion-item>
   <br>
 
@@ -51,7 +52,7 @@
   </ion-item>
   <br>
 
-  <ion-item color="secondary" class="descricao">
+  <ion-item color="secondary" class="label">
     <ion-label position="floating">Descrição</ion-label>
     <ion-textarea [(ngModel)]="quadra.descricao"></ion-textarea>
   </ion-item>

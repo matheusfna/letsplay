@@ -4,7 +4,7 @@ export class Quadra {
     public logradouro: string;
     public bairro: string;
     public cidade: string;
-    public esporte: string;
+    public esporte: number;
     public valorHora: number;
     public telefone: string;
     public descricao: string;

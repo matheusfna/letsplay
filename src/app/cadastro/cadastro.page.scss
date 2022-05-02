@@ -4,7 +4,6 @@ ion-content  {
 
 .label {
     width: 250px;
-    height: 50px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
@@ -26,8 +25,9 @@ ion-button {
 }
 
 .descricao {
-    --border-radius:20px;
-    margin-left: 15%;
-    margin-right: 15%;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
 
 }

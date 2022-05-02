@@ -2,9 +2,8 @@
   <ion-list>
 
     <ion-item id="esporte">
-      <ion-select placeholder="Esporte">
-        <ion-select-option value="f">Female</ion-select-option>
-        <ion-select-option value="m">Male</ion-select-option>
+      <ion-select placeholder="Esporte" [(ngModel)]="selected" (ngModelChange)="getByEsportes()">
+        <ion-select-option *ngFor="let item of esportes" [value]="item.id">{{item.nome}}</ion-select-option>
       </ion-select>
     </ion-item>
 
