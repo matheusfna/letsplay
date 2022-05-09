@@ -27,7 +27,10 @@ const routes: Routes = [
     path: 'quadra-edit/:id',
     loadChildren: () => import('./quadra-edit/quadra-edit.module').then(m => m.QuadraEditPageModule)
   },
-
+  {
+    path: 'agendamento-quadra/:id',
+    loadChildren: () => import('./agendamento-quadra/agendamento-quadra.module').then(m => m.AgendamentoQuadraPageModule)
+  },
 ];
 
 @NgModule({

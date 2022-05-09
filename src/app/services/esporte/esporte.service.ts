@@ -36,4 +36,12 @@ export class EsporteService {
     }
     return esportes;
   }
+
+  public getById(id: number) {
+    for (let obj of this.esportes) {
+      if (obj.id === id) {
+        return obj;
+      }
+    }
+  }
 }

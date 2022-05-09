@@ -1,0 +1,40 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+
+  <div id="divAgendamentoQuadra">
+    <ion-label>{{quadra.nome}}</ion-label>
+  </div>
+
+  <ion-card>
+    <ion-card-content>
+      Rua/Av: {{quadra.logradouro}}
+      <br>
+      Bairro: {{quadra.bairro}}
+      <br>
+      Cidade: {{quadra.cidade}}
+      <br>
+      Esporte: {{esporte.nome}}
+      <br>
+      Telefone: {{quadra.telefone}}
+      <br>
+      Valor Hora: {{quadra.valorHora}}
+      <br>
+      Descrição: {{quadra.descricao}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-label class="ion-padding" id="lbCalendario">Calendário</ion-label>
+
+  <ion-item class="ion-padding">
+    <ion-label>Enter Date</ion-label>
+    <ion-datetime displayFormat="YYYY-MMMM-D" pickerFormat="DD MM YYYY">
+    </ion-datetime>
+  </ion-item>
+
+  <ion-label class="ion-padding" id="lbCalendario">Detalhes do Agendamento</ion-label>
+  <ion-button color="primary" id="lbCalendario" [routerLink]="['/home']">Confirmar Agendamento</ion-button>
+  <ion-button color="danger" id="lbCalendario" [routerLink]="['/home']">Cancelar</ion-button>
+</ion-content>
