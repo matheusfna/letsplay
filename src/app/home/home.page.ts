@@ -20,11 +20,24 @@ export class HomePage implements OnInit {
   constructor(private quadraService: QuadrasService, private EsporteService: EsporteService) { }
 
   ngOnInit() {
-    this.quadras = this.quadraService.getAll();
     this.esportes = this.EsporteService.getAll();
+
+    this.quadraService.getAll().subscribe((quadrasColecao)=>{
+      console.log(quadrasColecao);
+
+      this.quadras = quadrasColecao.map((item)=>{
+        return {
+          id: item.payload.doc.id,
+          nome: item.payload.doc.data()['nome'],
+          descricao: item.payload.doc.data()['descricao'],
+          preco: item.payload.doc.data()['preco'],
+          foto: item.payload.doc.data()['foto']
+        };
+      });
+    });
   }
   public getByEsportes() {
-    this.quadras = this.quadraService.getByEsporte(this.selected);
+    //this.quadras = this.quadraService.getByEsporte(this.selected);
     console.log(this.quadras);
   }
 }

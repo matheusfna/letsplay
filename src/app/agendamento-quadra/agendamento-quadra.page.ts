@@ -21,7 +21,7 @@ export class AgendamentoQuadraPage implements OnInit {
   ngOnInit() {
     const codigo = Number(this.rotaAtiva.snapshot.paramMap.get('id'));
 
-    this.quadra = this.quadrasService.getById(codigo);
+    //this.quadra = this.quadrasService.getById(codigo);
 
     this.esporte = this.esporteService.getById(this.quadra.esporte);
   }

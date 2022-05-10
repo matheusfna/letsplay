@@ -17,17 +17,13 @@ export class QuadraEditPage implements OnInit {
 
   ngOnInit() {
     const codigo = Number(this.rotaAtiva.snapshot.paramMap.get('id'));
-
-    this.quadra = this.quadrasService.getById(codigo);
   }
 
   public editar() {
-    this.quadrasService.edit(this.quadraEdit, this.quadra.id);
     this.rota.navigate(['/home']);
   }
 
   public deletar() {
-    this.quadrasService.delete(this.quadra.id);
     this.rota.navigate(['/home']);
   }
 }

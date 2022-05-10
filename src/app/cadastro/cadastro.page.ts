@@ -15,15 +15,17 @@ export class CadastroPage implements OnInit {
   public quadra: Quadra = new Quadra();
   public esportes: Array<Esporte> = [];
   public selected: number;
-  
-  constructor(private quadraService: QuadrasService, private rota: Router,private EsporteService: EsporteService) { }
+
+  constructor(private quadraService: QuadrasService, private rota: Router, private EsporteService: EsporteService) { }
 
   ngOnInit() {
     this.esportes = this.EsporteService.getEsporte();
   }
 
   public cadastrar() {
-    this.quadraService.add(this.quadra);
-    this.rota.navigate(['/home']);
+    this.quadraService.add(this.quadra).then((resposta) => {
+      console.log(resposta);
+      this.rota.navigate(['/home']);
+    });
   }
 }
