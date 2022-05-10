@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Quadra } from '../model/quadra.model';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import id from 'date-fns/locale/id';
 
 @Injectable({
   providedIn: 'root'
@@ -56,8 +57,8 @@ export class QuadrasService {
     });
   }
 
-  public edit(quadra: Quadra) {
-    return this.firestore.doc('quadras/' + quadra.id).update({
+  public edit(quadra: Quadra, id: String) {
+    return this.firestore.doc('quadras/' + id).update({
       ...quadra
     });
   }

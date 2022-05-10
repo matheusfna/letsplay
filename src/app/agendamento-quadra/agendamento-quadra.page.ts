@@ -14,16 +14,16 @@ import { Esporte } from '../model/esporte.model';
 export class AgendamentoQuadraPage implements OnInit {
 
   public quadra: Quadra = new Quadra();
-  public esporte: Esporte = new Esporte();
+  //public esporte: Esporte = new Esporte();
 
-  constructor(private rotaAtiva: ActivatedRoute, private rota: Router, private quadrasService: QuadrasService, private esporteService: EsporteService) { }
+  constructor(private rotaAtiva: ActivatedRoute, private rota: Router, private quadrasService: QuadrasService) { }
 
   ngOnInit() {
-    const codigo = Number(this.rotaAtiva.snapshot.paramMap.get('id'));
+    const codigo = this.rotaAtiva.snapshot.paramMap.get('id');
 
-    //this.quadra = this.quadrasService.getById(codigo);
-
-    this.esporte = this.esporteService.getById(this.quadra.esporte);
+    this.quadrasService.get(codigo).then((quadra) => {
+      this.quadra = quadra;
+    });
   }
 
 }

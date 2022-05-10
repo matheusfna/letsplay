@@ -22,16 +22,20 @@ export class HomePage implements OnInit {
   ngOnInit() {
     this.esportes = this.EsporteService.getAll();
 
-    this.quadraService.getAll().subscribe((quadrasColecao)=>{
+    this.quadraService.getAll().subscribe((quadrasColecao) => {
       console.log(quadrasColecao);
 
-      this.quadras = quadrasColecao.map((item)=>{
+      this.quadras = quadrasColecao.map((item) => {
         return {
           id: item.payload.doc.id,
           nome: item.payload.doc.data()['nome'],
-          descricao: item.payload.doc.data()['descricao'],
-          preco: item.payload.doc.data()['preco'],
-          foto: item.payload.doc.data()['foto']
+          logradouro: item.payload.doc.data()['logradouro'],
+          bairro: item.payload.doc.data()['bairro'],
+          cidade: item.payload.doc.data()['cidade'],
+          esporte: item.payload.doc.data()['esporte'],
+          valorHora: item.payload.doc.data()['valorHora'],
+          telefone: item.payload.doc.data()['telefone'],
+          descricao: item.payload.doc.data()['descricao']
         };
       });
     });

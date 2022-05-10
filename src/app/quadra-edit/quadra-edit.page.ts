@@ -16,14 +16,22 @@ export class QuadraEditPage implements OnInit {
   constructor(private rotaAtiva: ActivatedRoute, private rota: Router, private quadrasService: QuadrasService) { }
 
   ngOnInit() {
-    const codigo = Number(this.rotaAtiva.snapshot.paramMap.get('id'));
+    const codigo = this.rotaAtiva.snapshot.paramMap.get('id');
+
+    this.quadrasService.get(codigo).then((quadra) => {
+      this.quadra = quadra;
+    });
   }
 
   public editar() {
-    this.rota.navigate(['/home']);
+    this.quadrasService.edit(this.quadraEdit, this.quadra.id).then(() => {
+      this.rota.navigate(['/home']);
+    });
   }
 
   public deletar() {
-    this.rota.navigate(['/home']);
+    this.quadrasService.delete(this.quadra.id).then(() => {
+      this.rota.navigate(['/home']);
+    });
   }
 }

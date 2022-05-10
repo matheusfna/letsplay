@@ -1,5 +1,5 @@
 export class Quadra {
-    public id: number;
+    public id: string;
     public nome: string;
     public logradouro: string;
     public bairro: string;
