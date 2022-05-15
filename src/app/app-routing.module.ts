@@ -33,7 +33,11 @@ const routes: Routes = [
   {
     path: 'agendamento-quadra/:id',
     loadChildren: () => import('./agendamento-quadra/agendamento-quadra.module').then(m => m.AgendamentoQuadraPageModule)
+  },  {
+    path: 'home-admin',
+    loadChildren: () => import('./home-admin/home-admin.module').then( m => m.HomeAdminPageModule)
   },
+
 ];
 
 @NgModule({
