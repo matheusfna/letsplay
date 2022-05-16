@@ -8,22 +8,23 @@
 
   <ion-item color="secondary">
     <ion-label position="floating">E-mail</ion-label>
-    <ion-input></ion-input>
+    <ion-input #userName required></ion-input>
   </ion-item>
 
   <br>
   <ion-item color="secondary">
     <ion-label position="floating">Senha</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" #userPassword required></ion-input>
   </ion-item>
 
   <br>
-  <ion-button expand="block" size="small" [routerLink]="['/home']">Entrar</ion-button>
+  <ion-button expand="block" size="small" (click)="authService.SignIn(userName.value, userPassword.value)">Entrar
+  </ion-button>
   <br>
-  
+
   <div id="criarConta">
     <ion-router-link [routerLink]="['/register']">Criar Conta</ion-router-link>
   </div>
-  
+
 
 </ion-content>

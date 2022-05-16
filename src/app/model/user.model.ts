@@ -1,9 +1,9 @@
-export class Quadra {
-    public id: string;
-    public nome: string;
-    public telefone: string;
+export class User {
+    public uid: string;
+    //public nome: string;
+    //public telefone: string;
     public email: string;
-    public senha: string;
+    //public password: string;
 
     constructor() {
 

@@ -25,13 +25,13 @@ export class QuadraEditPage implements OnInit {
 
   public editar() {
     this.quadrasService.edit(this.quadraEdit, this.quadra.id).then(() => {
-      this.rota.navigate(['/home']);
+      this.rota.navigate(['/home-admin']);
     });
   }
 
   public deletar() {
     this.quadrasService.delete(this.quadra.id).then(() => {
-      this.rota.navigate(['/home']);
+      this.rota.navigate(['/home-admin']);
     });
   }
 }

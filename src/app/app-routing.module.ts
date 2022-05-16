@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { AuthGuardService } from 'src/app/guards/auth-guard.service';
+import { AuthGuard } from 'src/app/guards/auth-guard.service';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule),
+    //canActivate: [AuthGuard]
   },
   {
     path: '',
@@ -19,12 +20,10 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./register/register.module').then(m => m.RegisterPageModule),
-    canActivate: [AuthGuardService]
   },
   {
     path: 'cadastro',
     loadChildren: () => import('./cadastro/cadastro.module').then(m => m.CadastroPageModule),
-    canActivate: [AuthGuardService]
   },
   {
     path: 'quadra-edit/:id',
@@ -33,9 +32,10 @@ const routes: Routes = [
   {
     path: 'agendamento-quadra/:id',
     loadChildren: () => import('./agendamento-quadra/agendamento-quadra.module').then(m => m.AgendamentoQuadraPageModule)
-  },  {
+  },
+  {
     path: 'home-admin',
-    loadChildren: () => import('./home-admin/home-admin.module').then( m => m.HomeAdminPageModule)
+    loadChildren: () => import('./home-admin/home-admin.module').then(m => m.HomeAdminPageModule)
   },
 
 ];

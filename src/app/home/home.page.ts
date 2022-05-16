@@ -4,6 +4,7 @@ import { Quadra } from 'src/app/model/quadra.model';
 import { QuadrasService } from 'src/app/services/quadras.service';
 import { Esporte } from '../model/esporte.model';
 import { EsporteService } from '../services/esporte/esporte.service';
+import { AuthService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,7 @@ export class HomePage implements OnInit {
   public esportes: Array<Esporte> = [];
   public selected: number;
 
-  constructor(private quadraService: QuadrasService, private EsporteService: EsporteService) { }
+  constructor(private quadraService: QuadrasService, private EsporteService: EsporteService, public authService: AuthService) { }
 
   ngOnInit() {
     this.esportes = this.EsporteService.getAll();

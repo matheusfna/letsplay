@@ -25,7 +25,7 @@ export class CadastroPage implements OnInit {
   public cadastrar() {
     this.quadraService.add(this.quadra).then((resposta) => {
       console.log(resposta);
-      this.rota.navigate(['/home']);
+      this.rota.navigate(['/home-admin']);
     });
   }
 }

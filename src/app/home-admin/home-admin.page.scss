@@ -1,0 +1,68 @@
+ion-content {
+    --background: url("./../../assets/img/backgroundapp.jpeg") no-repeat center center / cover !important;
+}
+
+ion-icon {
+    height: 35px;
+    width: 35px;
+}
+
+ion-footer {
+    display: block;
+    padding: 3px;
+    background-color: rgb(36, 36, 36);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+}
+
+ion-card {
+    background-color: greenyellow;
+}
+
+ion-card-title {
+    color: black;
+}
+
+#calendar {
+    margin-left: 120px;
+    cursor: auto;
+}
+
+#home {
+    margin-left: 50px;
+    cursor: auto;
+}
+
+#esporte {
+    float: left;
+    width: 100px;
+    font-size: 12px;
+    background-color: black;
+}
+
+#cidade {
+    float: left;
+    width: 100px;
+    font-size: 12px;
+    background-color: black;
+}
+
+#bairro {
+    float: left;
+    width: 100px;
+    font-size: 12px;
+    background-color: black;
+}
+
+#listaQuadras {
+    padding: 3px;
+    border-radius: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 290px;
+    text-align: center;
+    font-size: 12px;
+}

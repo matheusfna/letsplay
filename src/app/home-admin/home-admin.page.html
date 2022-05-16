@@ -1,9 +1,48 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>home-admin</ion-title>
-  </ion-toolbar>
+<ion-header [translucent]="true">
+  <ion-list>
+
+    <ion-item id="esporte">
+      <ion-select placeholder="Esporte" [(ngModel)]="selected" (ngModelChange)="getByEsportes()">
+        <ion-select-option *ngFor="let item of esportes" [value]="item.id">{{item.nome}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item id="cidade">
+      <ion-select placeholder="Cidade">
+        <ion-select-option value="f">Female</ion-select-option>
+        <ion-select-option value="m">Male</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item id="bairro">
+      <ion-select placeholder="Bairro">
+        <ion-select-option value="f">Female</ion-select-option>
+        <ion-select-option value="m">Male</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
 </ion-header>
 
 <ion-content>
+  <ion-card [routerLink]="['/quadra-edit', obj.id]" *ngFor="let obj of quadras">
+    <ion-card-header>
+      <ion-card-title>
+        {{ obj.nome }}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Valor Hora R$: </ion-label>
+        <ion-input type="" [ngModel]="obj.valorHora">
+        </ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
+
+<ion-footer>
+  <ion-icon name="home-outline" id="home" [routerLink]="['/home-admin']"></ion-icon>
+  <ion-icon name="add-circle-outline" id="calendar" [routerLink]="['/cadastro']"></ion-icon>
+</ion-footer>
