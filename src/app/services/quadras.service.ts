@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Quadra } from '../model/quadra.model';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import id from 'date-fns/locale/id';
+import { Observable, observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,22 +11,11 @@ export class QuadrasService {
 
   constructor(private firestore: AngularFirestore) { }
 
-  public getAll() {
+  public getAll(): Observable<any>{
     return this.firestore.collection('quadras').snapshotChanges();
   }
 
-  // public getByEsporte(cod: number) {
-  //   let esportes = [];
-  //   if (cod === 0)
-  //     return this.quadras;
-
-  //   for (let obj of this.quadras) {
-  //     if (obj.esporte === cod) {
-  //       esportes.push(obj);
-  //     }
-  //   }
-  //   return esportes;
-  // }
+ 
 
   public get(id: string) {
     return this.firestore.collection('quadras')

@@ -23,8 +23,8 @@
 
   </ion-list>
 </ion-header>
-
-<ion-content>
+ 
+<ion-content *ngIf="!loading">
   <ion-card [routerLink]="['/agendamento-quadra', obj.id]" *ngFor="let obj of quadras">
     <ion-card-header>
       <ion-card-title>
