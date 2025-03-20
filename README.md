@@ -1,4 +1,4 @@
-# 🏟️ **SportCourt Manager** - Sistema de Aluguel de Quadras Esportivas
+# 🏟️ **LetsPlay APP** - Sistema de Aluguel de Quadras Esportivas
 
 > Aplicação acadêmica desenvolvida com **Ionic + Angular** para gestão de reservas de quadras esportivas, incluindo futebol, futsal, vôlei e outros esportes.
 
